@@ -1,0 +1,27 @@
+.header {
+	position: fixed;
+	top: 0; right: 0; left: 0;
+	z-index: 2;
+
+	padding: 24px 40px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	transition: all ease .5s;
+	background-color: transparent;
+}
+
+.isScrolled {
+	background-color: #141414;
+}
+
+.header img {
+	width: 100px;
+}
+
+.userProfile img {
+	width: 32px;
+	border-radius: 4px;
+}

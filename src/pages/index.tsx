@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+import Header from '../components/Header';
+
 export default function Home () {
 	return (
 		<React.Fragment>
@@ -8,7 +10,7 @@ export default function Home () {
 				<title>Netflix - Assista a Séries e Filmes On-line</title>
 			</Head>
 
-			<h1>Netflix Redesign</h1>
+			<Header />
 		</React.Fragment>
 	)
 }

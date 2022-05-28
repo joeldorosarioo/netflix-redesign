@@ -54,13 +54,20 @@
 	border-radius: 6px;
 	padding: 12px 24px;
 
-	display: inline-block;
+	display: flex;
+	align-items: center;
+
 	cursor: pointer;
 
 	font-size: 20px;
 	font-weight: bold;
 
 	transition: all ease .2s;
+}
+
+.buttonsWrapper button svg {
+	margin-right: 8px;
+	display: block;
 }
 
 .buttonsWrapper button > span {

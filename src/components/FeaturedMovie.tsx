@@ -1,3 +1,6 @@
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import AddIcon from '@material-ui/icons/Add';
+
 import IMovieCommon from '../interfaces/IMovieCommon';
 
 import styles from '../stylesheets/components/FeaturedMovie.module.css';
@@ -29,8 +32,13 @@ export default function FeaturedMovie({ movie }: FeaturedMovieProps) {
 				<div className={ styles.movieDescription }>{ movie?.overview }</div>
 
 				<div className={ styles.buttonsWrapper }>
-					<button type="button" className={ styles.watchButton }>► Play</button>
-					<button type="button" className={ styles.myListButton }>+ Watch List</button>
+					<button type="button" className={ styles.watchButton }>
+						<PlayArrowIcon /> Play
+					</button>
+
+					<button type="button" className={ styles.myListButton }>
+						<AddIcon /> Watch List
+					</button>
 				</div>
 
 				<div className={ styles.movieGenres }>

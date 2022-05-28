@@ -1,0 +1,105 @@
+.featuredMovie {
+	position: relative;
+	min-height: 100vh;
+
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	align-items: center;
+}
+
+.movieInfo {
+	padding: 64px;
+}
+
+.movieTitle {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.wrapper {
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.wrapper span:not(:last-of-type) {
+	margin-right: 16px;
+}
+
+.wrapper .voteAverage {
+	color: #46D369;
+}
+
+.movieDescription {
+	max-width: 760px;
+
+	font-size: 20px;
+	color: #CCCCCC;
+}
+
+.buttonsWrapper {
+	margin-top: 16px;
+	margin-bottom: 18px;
+
+	display: flex;
+	align-items: center;
+}
+
+.buttonsWrapper button {
+	border: none;
+	border-radius: 6px;
+	padding: 12px 24px;
+
+	display: inline-block;
+	cursor: pointer;
+
+	font-size: 20px;
+	font-weight: bold;
+
+	transition: all ease .2s;
+}
+
+.buttonsWrapper button > span {
+	font-size: 24px;
+}
+
+.buttonsWrapper button:not(:last-of-type) {
+	margin-right: 16px;
+}
+
+.buttonsWrapper .watchButton {
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.buttonsWrapper .watchButton:hover {
+	background-color: #C1C1C1;
+}
+
+.buttonsWrapper .myListButton {
+	color: #FFFFFF;
+	background-color: #333333;
+}
+
+.buttonsWrapper .myListButton:hover {
+	background-color: #444444;
+}
+
+@media (max-width: 767.98px) {
+	.movieInfo {
+		padding: 180px 24px;
+	}
+
+	.movieTitle {
+		font-size: 40px;
+	}
+
+	.buttonsWrapper button {
+		padding: 12px 20px;
+		font-size: 16px;
+	}
+}

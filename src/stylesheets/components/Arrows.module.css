@@ -1,0 +1,39 @@
+.arrows {
+	top: 0; bottom: 0;
+	transform: none;
+
+	height: 300px;
+	width: 50px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: all ease .5s;
+}
+
+.arrows::before {
+	content: none;
+}
+
+.arrows:hover,
+.arrows:focus {
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.arrows svg {
+	color: #C1C1C1;
+}
+
+.arrows:hover svg,
+.arrows:focus svg {
+	color: #FFFFFF;
+}
+
+.navPrev {
+	left: -50px;
+}
+
+.navNext {
+	right: -50px;
+}

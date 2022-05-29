@@ -134,5 +134,11 @@ progress {
 
 .movieList {
 	position: relative;
-	margin-top: -136px;
+	margin-top: -164px;
+}
+
+@media (max-width: 767.98px) {
+	.movieList {
+		margin-top: 0;
+	}
 }

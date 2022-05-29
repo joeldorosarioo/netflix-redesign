@@ -1,12 +1,12 @@
 import Slider from 'react-slick';
 
+import IMovieCommon from '../interfaces/IMovieCommon';
+
 import { NavigatePrevious, NavigateNext } from './Arrows';
 
 import styles from '../stylesheets/components/MovieRow.module.css';
 
 export default function MovieRow ({ title, items }: any) {
-	console.log(items);
-
 	const settings = {
 		dots: false,
 		arrow: true,
@@ -14,8 +14,8 @@ export default function MovieRow ({ title, items }: any) {
 		speed: 500,
 		infinite: false,
 
-		slidesToShow: 8,
-		slidesToScroll: 8,
+		slidesToShow: 6,
+		slidesToScroll: 6,
 
 		nextArrow: <NavigateNext />,
 		prevArrow: <NavigatePrevious />,
@@ -49,9 +49,9 @@ export default function MovieRow ({ title, items }: any) {
 
 			<div className={ styles.wrapper }>
 				<Slider {...settings} className={ styles.moviesList }>
-					{ items.results.length > 0 && items.results.map((item: any, key: number) => (
+					{ items.results.length > 0 && items.results.map((movie: IMovieCommon, key: number) => (
 						<div key={ key } className={ styles.movieItem }>
-							<img src={ `https://image.tmdb.org/t/p/original${ item.poster_path }` } alt={ item.original_title } />
+							<img src={ `https://image.tmdb.org/t/p/original${ movie.backdrop_path }` } title={ movie.name } />
 						</div>
 					)) }
 				</Slider>

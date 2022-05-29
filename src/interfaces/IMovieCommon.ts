@@ -13,4 +13,5 @@ export default interface IMovieCommon {
 	number_of_seasons?: number;
 	first_air_date: string;
 	genres: IMoviesGenres[];
+	original_title: string;
 }

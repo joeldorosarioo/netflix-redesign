@@ -2,11 +2,12 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import AddIcon from '@material-ui/icons/Add';
 
 import IMovieCommon from '../interfaces/IMovieCommon';
+import IMoviesGenres from '../interfaces/IMoviesGenres';
 
 import styles from '../stylesheets/components/FeaturedMovie.module.css';
 
 type FeaturedMovieProps = {
-  movie: IMovieCommon
+  movie: IMovieCommon;
 }
 
 export default function FeaturedMovie({ movie }: FeaturedMovieProps) {
@@ -15,7 +16,7 @@ export default function FeaturedMovie({ movie }: FeaturedMovieProps) {
 	return (
 		<section className={ styles.featuredMovie } style={{
 			backgroundImage:
-				`linear-gradient(360deg, #111111, rgba(17, 17, 17, .46)), url(https://image.tmdb.org/t/p/original/${ movie?.backdrop_path })`
+				`linear-gradient(360deg, #111111, rgba(17, 17, 17, .46)), url(https://image.tmdb.org/t/p/original${ movie?.backdrop_path })`
 		}}>
 			<div className={ styles.movieInfo }>
 				<h1 className={ styles.movieTitle }>{ movie?.name }</h1>
@@ -42,7 +43,7 @@ export default function FeaturedMovie({ movie }: FeaturedMovieProps) {
 				</div>
 
 				<div className={ styles.movieGenres }>
-					<strong>Gêneros:</strong> { movie?.genres.map((gender: any, index: number) => (
+					<strong>Gêneros:</strong> { movie?.genres.map((gender: IMoviesGenres, index: number) => (
 						index !== movie?.genres.length - 1 ? (
 							<span key={ gender.id }>{`${ gender.name }, `}</span>
 						) : (

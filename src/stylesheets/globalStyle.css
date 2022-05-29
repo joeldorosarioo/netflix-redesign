@@ -144,3 +144,9 @@ progress {
 		margin-top: 0;
 	}
 }
+
+@media (max-height: 767.98px) {
+	.movieList {
+		margin-top: 0;
+	}
+}

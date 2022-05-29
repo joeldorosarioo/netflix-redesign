@@ -131,3 +131,8 @@ progress {
 ::-webkit-file-upload-button {
 	-webkit-appearance: button;
 }
+
+.movieList {
+	position: relative;
+	margin-top: -136px;
+}

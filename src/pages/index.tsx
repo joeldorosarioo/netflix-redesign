@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 import IMovieCommon from '../interfaces/IMovieCommon';
+import IMovieList from '../interfaces/IMovieList';
 
 import Header from '../components/Header';
 import FeaturedMovie from '../components/FeaturedMovie';
+import MovieRow from '../components/MovieRow';
+import Loader from '../components/Loader';
 
 import TMDB from '../utils/Tmdb';
 
@@ -33,9 +36,17 @@ export default function Home () {
 
 			<Header />
 
+			{ featuredMovie &&
+					<FeaturedMovie movie={ featuredMovie } />
+			}
 
-			{ featuredMovie && <FeaturedMovie movie={ featuredMovie } /> }
+			<div className="movieList">
+				{ movieList.map((item: IMovieList, i: number) => (
+					<MovieRow key={ i } title={ item.title } items={ item.items } />
+				)) }
+			</div>
 
+			{ movieList.length <= 0 && <Loader /> }
 		</React.Fragment>
 	)
 }

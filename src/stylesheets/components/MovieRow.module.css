@@ -1,0 +1,30 @@
+.movieRow {
+	margin-bottom: 30px;
+}
+
+.movieRow h2 {
+	margin: 0 64px 18px 64px;
+}
+
+.wrapper {
+	overflow-x: hidden;
+
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.movieItem {
+	cursor: pointer;
+	outline: none;
+}
+
+.movieItem img {
+	width: 100%;
+
+	transform: scale(.9);
+	transition: all ease .3s;
+}
+
+.movieItem img:hover {
+	transform: scale(1);
+}

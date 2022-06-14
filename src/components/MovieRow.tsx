@@ -51,7 +51,7 @@ export default function MovieRow ({ title, items }: any) {
 				<Slider {...settings} className={ styles.moviesList }>
 					{ items.results.length > 0 && items.results.map((movie: IMovieCommon, key: number) => (
 						<div key={ key } className={ styles.movieItem }>
-							<img src={ `https://image.tmdb.org/t/p/original${ movie.backdrop_path }` } title={ movie.name || movie.original_title} />
+							<img src={ `https://image.tmdb.org/t/p/w1280${ movie.poster_path }` } title={ movie.name || movie.original_title} />
 						</div>
 					)) }
 				</Slider>
